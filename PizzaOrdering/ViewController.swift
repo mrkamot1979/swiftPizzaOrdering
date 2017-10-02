@@ -15,6 +15,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //this array holds the selected pizzas, each zero represents the pizza specified in the pizzas array
     //if the pizza is not selected, it is shown as "0", if it is selected, it will be "1".
     var selectedPizza:[Int] = [0, 0, 0, 0]
+    //variable used to store if the User has selected Delivery
+    var hasSelectedDelivery:Bool = true
+    
+//Creating the table view using the function tableView
     
     //this function specifies how many rows the table will show
     //it returns pizzas.count; number of elements in the array
@@ -49,12 +53,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var label: UILabel! //name of the label that shows "DELIVERY: YES" or "DELIVERY: NO"
     
 
     @IBAction func mySwitch(_ sender: UISwitch)
     {
-    
+        //code below checks to see if the User has selected delivery or not
+        if sender.isOn == true
+        {
+            hasSelectedDelivery = true
+            label.text = "DELIVERY: YES"
+           
+        }
+        else
+        {
+            hasSelectedDelivery = false
+            label.text = "DELIVERY: NO"
+        }
     }
     
     
