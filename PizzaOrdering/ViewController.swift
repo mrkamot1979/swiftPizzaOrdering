@@ -24,6 +24,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     //this function tells the table how to display the content of each cell
+    //it returns "cell"
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
@@ -39,10 +40,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark
         {
             tableView.cellForRow(at: indexPath)?.accessoryType=UITableViewCellAccessoryType.none
+            selectedPizza[indexPath.row] = 0 //this line deselects the pizza by making its value 0
         }
         else
         {
             tableView.cellForRow(at: indexPath)?.accessoryType=UITableViewCellAccessoryType.checkmark
+            selectedPizza[indexPath.row] = 1  //this line essentially selects the pizza and changes it from 0 to 1
         }
     }
     
