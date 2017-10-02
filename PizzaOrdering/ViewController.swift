@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //this array houses the pizzas for sale.
     let pizzas:[String] = ["Pepperoni & Cheese", "Pineapple Pepperoni", "Ham & Cheese", "Tomato, Steak, Corn" ]
     
-    //this functin specifies how many rows the table will show
+    //this function specifies how many rows the table will show
     //it returns pizzas.count; number of elements in the array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
