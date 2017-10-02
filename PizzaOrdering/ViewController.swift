@@ -12,6 +12,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //this array houses the pizzas for sale.
     let pizzas:[String] = ["Pepperoni & Cheese", "Pineapple Pepperoni", "Ham & Cheese", "Tomato, Steak, Corn" ]
+    //this array holds the selected pizzas, each zero represents the pizza specified in the pizzas array
+    //if the pizza is not selected, it is shown as "0", if it is selected, it will be "1".
     var selectedPizza:[Int] = [0, 0, 0, 0]
     
     //this function specifies how many rows the table will show
