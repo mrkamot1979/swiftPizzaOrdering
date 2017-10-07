@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //this array holds the selected pizzas, each zero represents the pizza specified in the pizzas array
     //if the pizza is not selected, it is shown as "0", if it is selected, it will be "1".
-    var selectedPizza:[Int] = [0, 0, 0, 0]
+    var selectedPizzas:[Int] = [0, 0, 0, 0]
     
     //variable used to store if the User has selected Delivery
     var hasSelectedDelivery:Bool = true
@@ -52,12 +52,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark
         {
             tableView.cellForRow(at: indexPath)?.accessoryType=UITableViewCellAccessoryType.none
-            selectedPizza[indexPath.row] = 0 //this line deselects the pizza by making its value 0
+            selectedPizzas[indexPath.row] = 0 //this line deselects the pizza by making its value 0
         }
         else
         {
             tableView.cellForRow(at: indexPath)?.accessoryType=UITableViewCellAccessoryType.checkmark
-            selectedPizza[indexPath.row] = 1  //this line essentially selects the pizza and changes it from 0 to 1
+            selectedPizzas[indexPath.row] = 1  //this line essentially selects the pizza and changes it from 0 to 1
         }
     }
     
@@ -83,14 +83,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func viewOrder(_ sender: Any)
     {
-        for i in selectedPizza
+        for i in selectedPizzas
         {
             if i == 1
             {
                 totalPrice += pizzaPrices[i]
             }
         }
-        print(selectedPizza)
+        print(selectedPizzas)
         print(totalPrice)
         
     }
