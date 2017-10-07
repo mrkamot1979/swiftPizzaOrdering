@@ -12,11 +12,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //this array houses the pizzas for sale.
     let pizzas:[String] = ["Pepperoni & Cheese", "Pineapple Pepperoni", "Ham & Cheese", "Tomato, Steak, Corn" ]
+    
     //this array holds the selected pizzas, each zero represents the pizza specified in the pizzas array
     //if the pizza is not selected, it is shown as "0", if it is selected, it will be "1".
     var selectedPizza:[Int] = [0, 0, 0, 0]
+    
     //variable used to store if the User has selected Delivery
     var hasSelectedDelivery:Bool = true
+    
+    //array that holds Pizza pices
+    var pizzaPrices:[Int] = [9,6,7,8]
     
 //Creating the table view using the function tableView
     
@@ -63,7 +68,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         {
             hasSelectedDelivery = true
             label.text = "DELIVERY: YES"
-           
         }
         else
         {
