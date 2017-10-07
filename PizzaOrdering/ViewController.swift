@@ -10,7 +10,7 @@ import UIKit
 
 //variables are placed here so that they are made "global"
 var totalPrice:Int = 0
-var oder:String = ""
+var order:String = ""
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
@@ -86,16 +86,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func viewOrder(_ sender: Any)
     {
+        //check first if the User has chosen something
+        var hasSelectedSomething:Bool = false
+        
         for i in selectedPizzas
         {
             if i == 1
             {
-                totalPrice += pizzaPrices[i]
+                hasSelectedSomething = true
+            }
+            
+        }
+        
+        if hasSelectedSomething
+        {
+            for i in selectedPizzas
+            {
+                //Calculate the total price
+                if i == 1
+                {
+                    totalPrice += pizzaPrices[i]
+                }
             }
         }
-        print(selectedPizzas)
-        print(totalPrice)
-        
     }
     
     
