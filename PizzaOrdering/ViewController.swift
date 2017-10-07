@@ -23,6 +23,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //array that holds Pizza pices
     var pizzaPrices:[Int] = [9,6,7,8]
     
+    //variable that holds the total price
+    var totalPrice:Int = 0
+    
 //Creating the table view using the function tableView
     
     //this function specifies how many rows the table will show
@@ -68,6 +71,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         {
             hasSelectedDelivery = true
             label.text = "DELIVERY: YES"
+            
         }
         else
         {
@@ -79,8 +83,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func viewOrder(_ sender: Any)
     {
-    
-    
+        for i in selectedPizza
+        {
+            if i == 1
+            {
+                totalPrice += pizzaPrices[i]
+            }
+        }
+        print(selectedPizza)
+        print(totalPrice)
+        
     }
     
     
