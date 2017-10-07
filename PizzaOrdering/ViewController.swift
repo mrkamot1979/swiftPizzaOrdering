@@ -8,6 +8,10 @@
 
 import UIKit
 
+//variables are placed here so that they are made "global"
+var totalPrice:Int = 0
+var oder:String = ""
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     //this array houses the pizzas for sale.
@@ -21,10 +25,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var hasSelectedDelivery:Bool = true
     
     //array that holds Pizza pices
-    var pizzaPrices:[Int] = [9,6,7,8]
+    var pizzaPrices:[Int] = [9, 6, 7, 8]
     
-    //variable that holds the total price
-    var totalPrice:Int = 0
+
     
 //Creating the table view using the function tableView
     
