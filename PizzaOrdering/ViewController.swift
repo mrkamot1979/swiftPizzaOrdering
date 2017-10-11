@@ -98,17 +98,42 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
         }
         
-        if hasSelectedSomething
+        if hasSelectedSomething == true
         {
+            var x:Int = 0
             for i in selectedPizzas
             {
                 //Calculate the total price
                 if i == 1
                 {
-                    totalPrice += pizzaPrices[i]
+                    totalPrice += pizzaPrices[x]
+                    
+                    //Add description of Pizza
+                    order += pizzas[x] + "\n"
                 }
+                x += 1
             }
+        
+            //charging for Delivery
+            if hasSelectedDelivery == true
+            {
+                totalPrice += 5
+                order += "Delivery: $USD"
+            }
+            else
+            {
+                order += "Delivery: No delivery selected"
+            }
+            
+          
+            
+            performSegue(withIdentifier: "ordered", sender: self)
+        
+        
+        
         }
+    
+        
     }
     
     
