@@ -15,7 +15,7 @@ var order:String = ""
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     //this array houses the pizzas for sale.
-    let pizzas:[String] = ["Pepperoni & Cheese", "Pineapple Pepperoni", "Ham & Cheese", "Tomato, Steak, Corn" ]
+    let pizzas:[String] = ["Pepperoni & Cheese", "Pineapple Pepperoni", "Ham & Cheese", "Tomato, Steak, Corn"]
     
     //this array holds the selected pizzas, each zero represents the pizza specified in the pizzas array
     //if the pizza is not selected, it is shown as "0", if it is selected, it will be "1".
@@ -54,12 +54,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     {
         if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark
         {
-            tableView.cellForRow(at: indexPath)?.accessoryType=UITableViewCellAccessoryType.none
+            tableView.cellForRow(at: indexPath)?.accessoryType=UITableViewCellAccessoryType.none //this line removes the checkmark, hence .none
             selectedPizzas[indexPath.row] = 0 //this line deselects the pizza by making its value 0
         }
         else
         {
-            tableView.cellForRow(at: indexPath)?.accessoryType=UITableViewCellAccessoryType.checkmark
+            tableView.cellForRow(at: indexPath)?.accessoryType=UITableViewCellAccessoryType.checkmark //this line enables the checkmark, hence.checkmark
             selectedPizzas[indexPath.row] = 1  //this line essentially selects the pizza and changes it from 0 to 1
         }
     }
