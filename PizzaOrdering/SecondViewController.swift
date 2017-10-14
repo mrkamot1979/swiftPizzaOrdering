@@ -25,7 +25,7 @@ class SecondViewController: UIViewController {
         
         
         myTextView.text = order
-        myLabel.text = "Order:" + String(totalPrice)
+        myLabel.text = "Order Total:" + String(totalPrice) + " USD"
         
     }
 
