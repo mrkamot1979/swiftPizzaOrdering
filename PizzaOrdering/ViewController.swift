@@ -12,6 +12,8 @@ import UIKit
 var totalPrice:Int = 0
 var order:String = ""
 
+
+//when using a table, we need to add UITableViewDelegate and UITableViewDataSource
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     //this array houses the pizzas for sale.
@@ -124,16 +126,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             {
                 order += "Delivery: No delivery selected"
             }
-            
-          
-            
             performSegue(withIdentifier: "ordered", sender: self)
-        
-        
-        
         }
-    
-        
     }
     
     
