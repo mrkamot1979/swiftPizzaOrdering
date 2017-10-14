@@ -118,7 +118,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if hasSelectedDelivery == true
             {
                 totalPrice += 5
-                order += "Delivery: $USD"
+                order += "Delivery: $5 "
             }
             else
             {

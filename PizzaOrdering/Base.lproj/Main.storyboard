@@ -98,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236" y="-9"/>
+            <point key="canvasLocation" x="830" y="-38"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="aXo-hV-4jU">
@@ -121,8 +121,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGy-Na-1zu">
-                                <rect key="frame" x="0.0" y="394" width="375" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGy-Na-1zu">
+                                <rect key="frame" x="0.0" y="394" width="375" height="137"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="RES-sG-JQl"/>
                                 </constraints>
@@ -148,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sBX-35-Xfx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="720.79999999999995" y="-9.4452773613193415"/>
+            <point key="canvasLocation" x="1768.8" y="-38.23088455772114"/>
         </scene>
     </scenes>
 </document>
